@@ -23,6 +23,11 @@ import java.time.Period;
             Height = height;
             Birthday = birthday;
         }
+
+        public Person() {
+
+        }
+
         public LocalDate getBirthday() {
             return Birthday;
         }

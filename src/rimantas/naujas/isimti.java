@@ -2,52 +2,30 @@ package rimantas.naujas;
 
 import java.util.Arrays;
 
-public class isimti {
-
-
-    public static int[] removeTheElement(int[] arr, int index) {
-        if (arr == null || index < 0 || index >= arr.length) {
-            return arr;
-        }
-        int[] anotherArray = new int[arr.length - 1];
-        for (int i = 0, position = 0; i < arr.length; i++) {
-            if (i == index) {
-                continue;
-            }
-            anotherArray[position++] = arr[i];
-        }
-        return anotherArray;
-    }
-
+    public class isimti {
     public static void main(String[] args) {
-        int arr[] = {1, 2, 3, 4, 5};
+        int arr[] = {1, 2, 4, 5};
         int index = 3;
-
-        int position = arr.length;
-        for (int i = 0; i < position - 1; i++) {
-
-        }
-        position--;
-        for (int i = 0; i < position; i++) {
-        }
-
-        for (int i = 0; i > position - 1; i++) {
-            arr[i] = arr[i + 1];
-        }
-        for (int i = 0; i < position; i++) {
-
-        }
-        System.out.println("\nArray: " + Arrays.toString(arr));
-        arr = removeTheElement(arr,index);
-        System.out.println("Remuves any selected " + Arrays.toString(arr));
-
-        System.out.println("\nArray: " + Arrays.toString(arr));
-        arr = removeTheElement(arr, 0);
-        System.out.println("Remuves first: " + Arrays.toString(arr));
-
-        System.out.println("\nArray: " + Arrays.toString(arr));
-        arr = removeTheElement(arr, 2);
-        System.out.println("Remuves last: " + Arrays.toString(arr));
+        int position = 2;
+        int result[];
+        System.out.println("1. inserts another int at position 3");
+        result = helper.atAny(position, index, arr);
+        System.out.println(Arrays.toString(result));
+        System.out.println("2. inserts another int at the start");
+        result = helper.atStart(0, index, arr);
+        System.out.println(Arrays.toString(result));
+        System.out.println("3. inserts another int at the end");
+        result = helper.atEnd(arr.length, index, arr);
+        System.out.println(Arrays.toString(result));
+        System.out.println("4. removes element at position 3");
+        result = helper.removeAny(index, arr);
+        System.out.println(Arrays.toString(result));
+        System.out.println("5. removes first element");
+        result = helper.atStart(arr);
+        System.out.println(Arrays.toString(result));
+        System.out.println("6. removes last element");
+        result = helper.atEnd(arr);
+        System.out.println(Arrays.toString(result));
     }
 }
 

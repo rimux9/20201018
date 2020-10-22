@@ -1,7 +1,6 @@
-package rimantas;
+package rimantas.idetiIsimti.Ceasar;
 
 public class Ceaser {
-
 
     public static void main(String[] args) {
         //1. i String text irasau "Rimantas" ir c +=key

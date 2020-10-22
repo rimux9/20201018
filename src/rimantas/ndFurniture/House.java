@@ -1,9 +1,26 @@
 package rimantas.ndFurniture;
 
-public class House {
+import java.util.List;
 
-    private Room Kitchen;
-    private Room Bedroom;
-    private Room Bathroom;
-    private Room Extraroom;
-}
+    public class House {
+
+        private ListRoom RoomList;
+
+        public House(ListRoom roomList) {
+            RoomList = roomList;
+        }
+
+        public House(List<Room> roomsList) {
+        }
+
+        public ListRoom getRoomList() {
+            return RoomList;
+        }
+
+        public void setRoomList(ListRoom roomList) {
+            RoomList = roomList;
+        }
+        public String toString() {
+            return "House" + RoomList;
+        }
+    }
